@@ -10,11 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_12_02_111421) do
+ActiveRecord::Schema[7.1].define(version: 2023_12_02_164509) do
   create_table "ecards", force: :cascade do |t|
     t.string "name"
     t.text "description"
     t.string "picture"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "emessages", force: :cascade do |t|
+    t.string "from_email"
+    t.string "to_email"
+    t.text "message"
+    t.integer "ecard_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

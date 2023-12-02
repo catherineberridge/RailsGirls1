@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Emessages</h1>
+
+<div id="emessages">
+  <% @emessages.each do |emessage| %>
+    <%= render emessage %>
+    <p>
+      <%= link_to "Show this emessage", emessage %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New emessage", new_emessage_path %>

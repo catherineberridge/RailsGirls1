@@ -1,0 +1,2 @@
+class Emessage < ApplicationRecord
+end

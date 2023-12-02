@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :emessages
   get 'pages/about'
   get 'pages/info'
   root "pages#homepage"

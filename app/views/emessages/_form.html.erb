@@ -1,0 +1,37 @@
+<%= form_with(model: emessage) do |form| %>
+  <% if emessage.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(emessage.errors.count, "error") %> prohibited this emessage from being saved:</h2>
+
+      <ul>
+        <% emessage.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :from_email, style: "display: block" %>
+    <%= form.text_field :from_email %>
+  </div>
+
+  <div>
+    <%= form.label :to_email, style: "display: block" %>
+    <%= form.text_field :to_email %>
+  </div>
+
+  <div>
+    <%= form.label :message, style: "display: block" %>
+    <%= form.text_area :message %>
+  </div>
+
+  <div>
+    <%= form.label :ecard_id, style: "display: block" %>
+    <%= form.number_field :ecard_id %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
