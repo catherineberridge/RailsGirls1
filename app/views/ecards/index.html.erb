@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Ecards</h1>
+
+<div id="ecards">
+  <% @ecards.each do |ecard| %>
+    <%= render ecard %>
+    <p>
+      <%= link_to "Show this ecard", ecard %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New ecard", new_ecard_path %>

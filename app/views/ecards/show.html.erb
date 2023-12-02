@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @ecard %>
+
+<div>
+  <%= link_to "Edit this ecard", edit_ecard_path(@ecard) %> |
+  <%= link_to "Back to ecards", ecards_path %>
+
+  <%= button_to "Destroy this ecard", @ecard, method: :delete %>
+</div>

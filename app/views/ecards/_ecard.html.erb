@@ -1,0 +1,17 @@
+<div id="<%= dom_id ecard %>">
+  <p>
+    <strong>Name:</strong>
+    <%= ecard.name %>
+  </p>
+
+  <p>
+    <strong>Description:</strong>
+    <%= ecard.description %>
+  </p>
+
+  <p>
+    <strong>Picture:</strong>
+    <%= image_tag(ecard.picture_url, width: 600) if ecard.picture? %>
+  </p>
+
+</div>
